@@ -18,7 +18,7 @@
 
 <p>
   <label>
-    <input type="checkbox" name="record[colored]" <%= 'checked' if @record.complete %>/>
+    <input type="checkbox" name="record[complete]" <%= 'checked' if @record.complete %>/>
     <span>Colored</span>
   </label>
 </p>
@@ -31,4 +31,6 @@
 <form action="/records" method="get">
     <input type="submit" value="Never Mind"
          name="Submit" id="record"  class="btn"/>
+
+    <input type="submit" value="Update Record" class="btn">
 </form>
