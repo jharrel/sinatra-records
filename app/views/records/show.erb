@@ -1,0 +1,14 @@
+<h1><%= @record.title %></h1>
+<p><%= @record.completed ? 'Complete' : 'Not Complete' %></p>
+
+
+
+
+
+
+</form>
+
+<form action="/records" method="get">
+    <input type="submit" value="Return To The Record List"
+         name="Submit" id="record"  class="btn"/>
+</form>

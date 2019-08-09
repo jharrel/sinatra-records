@@ -1,0 +1,29 @@
+<!-- TODO: Create form for creating records -->
+<h1>Edit Your Record List!</h1>
+
+<% if @errors %>
+  <ul class="blue">
+    <% @errors.each do |error| %>
+    <li><%= error %></li>
+    <% end %>
+  </ul>
+  <% end %><br>
+
+<form action="/records/<%= @record.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <div class="input-field">
+    <input placeholder="Placeholder" name="record[title]" id="title" type="text" class="validate" value="<%= @record.title %>">
+    <label for="title">Title</label>
+  </div>
+
+<p>
+  <label>
+    <input type="checkbox" name="record[completed]" <%= 'checked' if @record.completed %>/>
+    <span>Completed</span>
+  </label>
+</p>
+
+
+
+   <input type="submit" value="Update Record" class="btn">
+</form>

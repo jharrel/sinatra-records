@@ -19,9 +19,24 @@
   <body>
     <!-- Navbar -->
     <nav>
+      <div class="nav-wrapper light-blue">
+        <div class="container">
+        <a href="/" class="brand-logo">Record Collection</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if is_logged_in? %>
+            <li><a href="/records/new">Enter a New Record</a></li>
+            <li><a href="/records">Record List</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <% else %>
+              <li><a href="/signup">Signup</a></li>
+              <li><a href="/login">Login</a></li>
+            <% end %>
+        </ul>
+        </div>
+      </div>
     </nav>
     <!-- Navbar End -->
-    <div class="wrapper">
+    <div class="container">
       <%= yield %>
     </div>
     <!-- Compiled and minified JavaScript -->

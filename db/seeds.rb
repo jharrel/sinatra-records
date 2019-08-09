@@ -1,0 +1,7 @@
+Record.create(title: "Walk The Dog", completed: [true, false].sample)
+Record.create(title: "Walk The Cat", completed: [true, false].sample)
+Record.create(title: "Walk The Lizzard", completed: [true, false].sample)
+Record.create(title: "Walk The Sheep", completed: [true, false].sample)
+Record.create(title: "Walk The Child", completed: [true, false].sample)
+Record.create(title: "Walk The Yourself", completed: [true, false].sample)
+Record.create(title: "Walk The Horse", completed: [true, false].sample)

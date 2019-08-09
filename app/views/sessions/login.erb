@@ -1,0 +1,19 @@
+<h1>Login</h1>
+<% if @errors %>
+  <ul class="dark blue">
+  <% @errors.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+<% end %><br>
+<form class="" action="/login" method="post">
+  <div class="input-field">
+      <input placeholder="Placeholder" id="username" name="username" type="text" class="validate">
+      <label for="username">Username</label>
+  </div>
+  <div class="input-field">
+      <input placeholder="password" id="password" name="password" type="password" class="validate">
+      <label for="password">password</label>
+  </div>
+  <input type="submit" name="" value="Login" class="btn">
+</form>
