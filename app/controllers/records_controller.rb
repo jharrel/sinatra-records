@@ -65,7 +65,7 @@ class RecordsController < ApplicationController
   end
 
   def record_params
-    { title: params[:record][:title], coolored: params[:record][:colored] }
+    { title: params[:record][:title], complete: params[:record][:complete] }
   end
 end
 
