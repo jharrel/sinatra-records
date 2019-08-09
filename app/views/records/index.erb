@@ -11,5 +11,21 @@
     </tr>
   </thead>
 
-
+  <tbody>
+    <% @records.each do |record| %>
+    <tr>
+      <td><%= record.title %></td>
+      <td><%= record.title %></td>
+      <td><%= record.complete ? 'Colored' : 'Not Colored' %></td>
+      <td><a href="/records/<%= record.id %>">View</a></td>
+      <td><a href="/records/<%= record.id %>/edit">Edit</a></td>
+      <td>
+        <form action="/record/<%= record.id %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="delete" class="btn-small light-blue">
+        </form>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
